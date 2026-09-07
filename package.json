@@ -1,0 +1,21 @@
+{
+  "name": "crosbreaker-docs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/@docusaurus/core/bin/docusaurus.mjs start --host 127.0.0.1 --port 3000 --no-open",
+    "build": "node node_modules/@docusaurus/core/bin/docusaurus.mjs build",
+    "serve": "node node_modules/@docusaurus/core/bin/docusaurus.mjs serve --host 127.0.0.1 --port 3000 --no-open"
+  },
+  "dependencies": {
+    "@docusaurus/core": "3.10.2",
+    "@docusaurus/preset-classic": "3.10.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "engines": {"node": ">=20"},
+  "browserslist": {
+    "production": [">0.5%", "not dead", "not op_mini all"],
+    "development": ["last 3 chrome versions", "last 3 firefox versions", "last 5 safari versions"]
+  }
+}

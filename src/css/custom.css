@@ -1,0 +1,17 @@
+:root {
+  --ifm-color-primary: #246e52;
+  --ifm-color-primary-dark: #206349;
+  --ifm-color-primary-darker: #1f5e46;
+  --ifm-color-primary-darkest: #194d39;
+  --ifm-color-primary-light: #28795a;
+  --ifm-color-primary-lighter: #297f5e;
+  --ifm-color-primary-lightest: #2f8f6b;
+}
+[data-theme='dark'] { --ifm-color-primary: #79d9af; }
+.doc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 1rem; margin-bottom: 2rem; }
+.doc-grid .card { border: 1px solid var(--ifm-color-emphasis-300); gap: .5rem; color: var(--ifm-font-color-base); }
+.hero-actions, .picker-fields { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+.picker-fields label { display: flex; flex: 1 1 220px; flex-direction: column; gap: .4rem; }
+.picker-fields input { padding: .7rem; border: 1px solid var(--ifm-color-emphasis-400); border-radius: .3rem; background: var(--ifm-background-color); color: var(--ifm-font-color-base); font: inherit; }
+.compatibility { border-left: 3px solid var(--ifm-color-primary); padding: .75rem 1rem; background: var(--ifm-color-emphasis-100); overflow-wrap: anywhere; }
+.missing-image { display: inline-block; margin-block: .5rem; }

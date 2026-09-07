@@ -1,0 +1,8 @@
+node_modules/
+.docusaurus/
+build/
+*.log
+/Agent/
+/docs.zip
+/scripts/
+.DS_Store
