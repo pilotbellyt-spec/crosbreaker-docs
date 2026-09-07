@@ -1,8 +1,11 @@
 module.exports = {
   title: 'crosbreaker',
   tagline: 'Documentation for crosbreaker\'s ChromeOS exploits and tools.',
-  url: 'https://docs.crosbreaker.com',
-  baseUrl: '/',
+  url: 'https://pilotbellyt-spec.github.io',
+  baseUrl: '/crosbreaker-docs/',
+  organizationName: 'pilotbellyt-spec',
+  projectName: 'crosbreaker-docs',
+  deploymentBranch: 'gh-pages',
   trailingSlash: true,
   onBrokenLinks: 'throw',
   markdown: {hooks: {onBrokenMarkdownLinks: 'throw', onBrokenMarkdownImages: 'throw'}},
