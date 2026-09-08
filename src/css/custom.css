@@ -104,7 +104,7 @@ html[data-theme='dark'] .navbar__title { color: #c4c1ff; }
 .menu__link--active, .menu__link:hover { color: var(--ifm-link-color); }
 .menu__link--active:not(.menu__link--sublist) { background: var(--ifm-menu-color-background-active); }
 html[data-theme='dark'] .menu__link--active:not(.menu__link--sublist) { background: #c4c1ff; color: #1a1a2e; }
-html[data-theme='light'] .menu__link--active:not(.menu__link--sublist) { background: #5b52e0; color: #0a0a0a; }
+html[data-theme='light'] .menu__link--active:not(.menu__link--sublist) { background: #5b52e0; color: #ffffff; }
 .theme-doc-markdown h1, .theme-doc-markdown h2, .theme-doc-markdown h3, .theme-doc-markdown h4 { color: var(--ifm-heading-color); }
 .theme-doc-markdown pre, .theme-doc-markdown code { border-color: var(--ifm-color-emphasis-200); }
 .theme-doc-markdown pre, .theme-code-block, .theme-code-block pre, .prism-code { background: #1a1a1a !important; color: #d6deeb !important; }
