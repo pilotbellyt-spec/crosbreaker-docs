@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@500&family=Inter:wght@400;500;600;700&display=swap');
+
 :root {
   --ifm-color-primary: #5b52e0;
   --ifm-color-primary-dark: #443ad9;
@@ -11,6 +13,8 @@
   --ifm-navbar-background-color: #f6f7f9;
   --ifm-font-color-base: #404040;
   --ifm-heading-color: #1a1a1a;
+  --ifm-font-family-base: 'Inter', system-ui, sans-serif;
+  --ifm-font-family-monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --ifm-link-color: #5b52e0;
   --ifm-menu-color-active: #5b52e0;
   --ifm-menu-color-background-active: #e8e6ff;
@@ -52,10 +56,53 @@ html[data-theme='dark'] {
   --ifm-card-background-color: #1a1a1a;
   --ifm-navbar-search-input-background-color: #0a0a0a;
   --ifm-navbar-search-input-color: #f5f5f5;
+  --ifm-color-content: #b0b0b0;
+  --ifm-color-content-secondary: #808080;
+  --ifm-code-background: #2a2a2a;
+  --ifm-toc-border-color: #2a2a2a;
+  --ifm-table-stripe-background: #1a1a1a;
 }
-.navbar { border-bottom: 1px solid var(--ifm-color-emphasis-200); box-shadow: none; }
-.navbar__title { color: var(--ifm-link-color); }
-.theme-doc-sidebar-container { background: var(--ifm-navbar-background-color); }
+html[data-theme='light'] {
+  --ifm-background-color: #f8f8fc;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-navbar-background-color: #f6f7f9;
+  --ifm-font-color-base: #404040;
+  --ifm-color-content: #404040;
+  --ifm-color-content-secondary: #808080;
+  --ifm-heading-color: #1a1a1a;
+  --ifm-color-emphasis-100: #f8f8fc;
+  --ifm-color-emphasis-200: #e0e0e0;
+  --ifm-color-emphasis-300: #d0d0d6;
+  --ifm-color-emphasis-400: #b0b0b0;
+  --ifm-color-emphasis-500: #808080;
+  --ifm-color-emphasis-600: #404040;
+  --ifm-color-emphasis-700: #2a2a2a;
+  --ifm-color-emphasis-800: #1a1a1a;
+  --ifm-color-emphasis-900: #0a0a0a;
+  --ifm-link-color: #5b52e0;
+  --ifm-link-hover-color: #2a2365;
+  --ifm-menu-color-active: #5b52e0;
+  --ifm-menu-color-background-active: #e8e6ff;
+  --ifm-card-background-color: #ffffff;
+  --ifm-code-background: #f0f0f4;
+  --ifm-toc-border-color: #e0e0e0;
+  --ifm-table-stripe-background: #f8f8fc;
+  --ifm-navbar-search-input-background-color: #ffffff;
+  --ifm-navbar-search-input-color: #404040;
+}
+.navbar { border-bottom: 1px solid var(--ifm-color-emphasis-200); box-shadow: none; background: var(--ifm-navbar-background-color); }
+.navbar__title { color: var(--ifm-link-color); font-family: Doto, var(--ifm-font-family-base); font-weight: 500; letter-spacing: .05em; }
+.navbar__link, .navbar__item { color: var(--ifm-font-color-base); }
+.navbar__link:hover { color: var(--ifm-link-color); }
+.theme-doc-sidebar-container, .theme-doc-sidebar-menu { background: var(--ifm-navbar-background-color); }
+.theme-doc-sidebar-item-link, .menu__link { color: var(--ifm-font-color-base); }
+.menu__link--active, .menu__link:hover { color: var(--ifm-link-color); }
+.menu__link--active:not(.menu__link--sublist) { background: var(--ifm-menu-color-background-active); }
+.theme-doc-markdown h1, .theme-doc-markdown h2, .theme-doc-markdown h3, .theme-doc-markdown h4 { color: var(--ifm-heading-color); }
+.theme-doc-markdown pre, .theme-doc-markdown code { border-color: var(--ifm-color-emphasis-200); }
+.theme-doc-markdown pre { background: var(--ifm-background-surface-color); }
+.alert { border-left-color: var(--ifm-color-primary); }
+.footer { background: var(--ifm-navbar-background-color); color: var(--ifm-font-color-base); }
 .navbar__search-input { border: 1px solid var(--ifm-color-emphasis-300); border-radius: .5rem; }
 .navbar__search-input:focus-visible, .picker-fields input:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 2px; }
 .doc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 1rem; margin-bottom: 2rem; }
