@@ -2,15 +2,15 @@
 
 :root {
   --ifm-color-primary: #5b52e0;
-  --ifm-color-primary-dark: #443ad9;
-  --ifm-color-primary-darker: #392ed6;
-  --ifm-color-primary-darkest: #2c23b2;
-  --ifm-color-primary-light: #726ae7;
-  --ifm-color-primary-lighter: #7d76ea;
-  --ifm-color-primary-lightest: #a09bf3;
+  --ifm-color-primary-dark: #5048c9;
+  --ifm-color-primary-darker: #463fb5;
+  --ifm-color-primary-darkest: #2a2365;
+  --ifm-color-primary-light: #7169e5;
+  --ifm-color-primary-lighter: #8b85eb;
+  --ifm-color-primary-lightest: #c4c1ff;
   --ifm-background-color: #fff;
   --ifm-background-surface-color: #f8f8fc;
-  --ifm-navbar-background-color: #1a1a1a;
+  --ifm-navbar-background-color: #f6f7f9;
   --ifm-font-color-base: #404040;
   --ifm-heading-color: #1a1a1a;
   --ifm-font-family-base: 'Inter', system-ui, sans-serif;
@@ -30,15 +30,15 @@
 }
 html[data-theme='dark'] {
   --ifm-color-primary: #6c63ff;
-  --ifm-color-primary-dark: #4c41ff;
-  --ifm-color-primary-darker: #3b30ff;
-  --ifm-color-primary-darkest: #1000fc;
-  --ifm-color-primary-light: #8c85ff;
-  --ifm-color-primary-lighter: #9d96ff;
+  --ifm-color-primary-dark: #5b52e0;
+  --ifm-color-primary-darker: #5048c9;
+  --ifm-color-primary-darkest: #2a2365;
+  --ifm-color-primary-light: #827bff;
+  --ifm-color-primary-lighter: #a09bff;
   --ifm-color-primary-lightest: #c4c1ff;
   --ifm-background-color: #0a0a0a;
   --ifm-background-surface-color: #1a1a1a;
-  --ifm-navbar-background-color: #f6f7f9;
+  --ifm-navbar-background-color: #1a1a1a;
   --ifm-font-color-base: #b0b0b0;
   --ifm-heading-color: #f5f5f5;
   --ifm-color-emphasis-100: #1a1a1a;
@@ -63,14 +63,14 @@ html[data-theme='dark'] {
   --ifm-table-stripe-background: #1a1a1a;
 }
 html[data-theme='light'] {
-  --ifm-background-color: #f8f8fc;
+  --ifm-background-color: #ffffff;
   --ifm-background-surface-color: #ffffff;
   --ifm-navbar-background-color: #f6f7f9;
   --ifm-font-color-base: #404040;
   --ifm-color-content: #404040;
   --ifm-color-content-secondary: #808080;
   --ifm-heading-color: #1a1a1a;
-  --ifm-color-emphasis-100: #f8f8fc;
+  --ifm-color-emphasis-100: #f6f7f9;
   --ifm-color-emphasis-200: #e0e0e0;
   --ifm-color-emphasis-300: #d0d0d6;
   --ifm-color-emphasis-400: #b0b0b0;
@@ -86,11 +86,12 @@ html[data-theme='light'] {
   --ifm-card-background-color: #ffffff;
   --ifm-code-background: #f0f0f4;
   --ifm-toc-border-color: #e0e0e0;
-  --ifm-table-stripe-background: #f8f8fc;
+  --ifm-table-stripe-background: #f6f7f9;
   --ifm-navbar-search-input-background-color: #ffffff;
   --ifm-navbar-search-input-color: #404040;
 }
 .navbar { border-bottom: 1px solid var(--ifm-color-emphasis-200); box-shadow: none; background: var(--ifm-navbar-background-color); }
+html[data-theme='dark'] .navbar { border-bottom-color: #0a0a0a; }
 .navbar__title { color: var(--ifm-link-color); font-family: Doto, var(--ifm-font-family-base); font-weight: 500; letter-spacing: .05em; }
 .navbar__link, .navbar__item { color: var(--ifm-navbar-link-color, var(--ifm-font-color-base)); }
 .navbar__link:hover { color: var(--ifm-link-color); }
@@ -98,22 +99,29 @@ html[data-theme='light'] {
 .theme-doc-sidebar-item-link, .menu__link { color: var(--ifm-font-color-base); }
 .menu__link--active, .menu__link:hover { color: var(--ifm-link-color); }
 .menu__link--active:not(.menu__link--sublist) { background: var(--ifm-menu-color-background-active); }
+html[data-theme='dark'] .menu__link--active:not(.menu__link--sublist) { background: #c4c1ff; color: #1a1a2e; }
+html[data-theme='light'] .menu__link--active:not(.menu__link--sublist) { background: #5b52e0; color: #0a0a0a; }
 .theme-doc-markdown h1, .theme-doc-markdown h2, .theme-doc-markdown h3, .theme-doc-markdown h4 { color: var(--ifm-heading-color); }
 .theme-doc-markdown pre, .theme-doc-markdown code { border-color: var(--ifm-color-emphasis-200); }
-.theme-doc-markdown pre, .theme-code-block, .theme-code-block pre, .prism-code { background: #1a1a1a !important; color: #d6deeb; }
+.theme-doc-markdown pre, .theme-code-block, .theme-code-block pre, .prism-code { background: #1a1a1a !important; color: #d6deeb !important; }
+.theme-code-block, .theme-code-block pre { border-radius: 0; }
 .theme-code-block { border: 1px solid color-mix(in srgb, #2a2a2a 75%, transparent); }
-.theme-code-block code { color: #d6deeb; }
-html[data-theme='dark'] .theme-code-block .token.keyword, html[data-theme='dark'] .theme-code-block .token.function, html[data-theme='dark'] .theme-code-block .token.builtin { color: #82aaff; }
-html[data-theme='dark'] .theme-code-block .token.string, html[data-theme='dark'] .theme-code-block .token.number { color: #ecc48d; }
-html[data-theme='dark'] .theme-code-block .token.comment { color: #5c6773; }
-html[data-theme='dark'] .theme-doc-sidebar-container, html[data-theme='dark'] .theme-doc-sidebar-menu { background: #0a0a0a; }
+.theme-code-block code, .theme-code-block code span { color: #d6deeb !important; }
+html[data-theme='dark'] .theme-code-block .token.keyword, html[data-theme='dark'] .theme-code-block .token.function, html[data-theme='dark'] .theme-code-block .token.builtin { color: #82aaff !important; }
+html[data-theme='dark'] .language-sh .token-line > .token.plain:first-child, html[data-theme='dark'] .language-sh .token.parameter { color: #82aaff !important; }
+html[data-theme='dark'] .language-sh .token-line > .token.plain:not(:first-child), html[data-theme='dark'] .language-sh .token.assign-left, html[data-theme='dark'] .theme-code-block .token.string { color: #ecc48d !important; }
+html[data-theme='dark'] .theme-code-block .token.number { color: #f78c6c !important; }
+html[data-theme='dark'] .theme-code-block .token.comment { color: #5c6773 !important; }
+html[data-theme='dark'] .theme-doc-sidebar-container, html[data-theme='dark'] .theme-doc-sidebar-menu { background: #1a1a1a; }
+html[data-theme='dark'] .theme-doc-sidebar-container { border-right-color: #0a0a0a; }
 html[data-theme='light'] .theme-doc-sidebar-container, html[data-theme='light'] .theme-doc-sidebar-menu { background: #ffffff; }
 html[data-theme='dark'] .navbar__search-input { background: #0a0a0a; color: #b0b0b0; }
-html[data-theme='light'] .theme-doc-markdown pre, html[data-theme='light'] .theme-code-block, html[data-theme='light'] .theme-code-block pre, html[data-theme='light'] .prism-code { background: #f6f7f9 !important; color: #403f53; border-color: #d0d0d6; }
-html[data-theme='light'] .theme-code-block code { color: #403f53; }
-html[data-theme='light'] .theme-code-block .token.keyword, html[data-theme='light'] .theme-code-block .token.function, html[data-theme='light'] .theme-code-block .token.builtin { color: #3b61b0; }
-html[data-theme='light'] .theme-code-block .token.string, html[data-theme='light'] .theme-code-block .token.number { color: #9c6500; }
-html[data-theme='light'] .theme-code-block .token.comment { color: #808080; }
+html[data-theme='light'] .theme-doc-markdown pre, html[data-theme='light'] .theme-code-block, html[data-theme='light'] .theme-code-block pre, html[data-theme='light'] .prism-code { background: #f6f7f9 !important; color: #403f53 !important; border-color: #d0d0d6; }
+html[data-theme='light'] .theme-code-block code, html[data-theme='light'] .theme-code-block code span { color: #403f53 !important; }
+html[data-theme='light'] .theme-code-block .token.keyword, html[data-theme='light'] .theme-code-block .token.function, html[data-theme='light'] .theme-code-block .token.builtin { color: #3b61b0 !important; }
+html[data-theme='light'] .language-sh .token.plain, html[data-theme='light'] .language-sh .token.parameter, html[data-theme='light'] .language-sh .token.assign-left, html[data-theme='light'] .language-sh .token.operator, html[data-theme='light'] .language-sh .token.variable { color: #3b61b0 !important; }
+html[data-theme='light'] .theme-code-block .token.string, html[data-theme='light'] .theme-code-block .token.number { color: #aa0982 !important; }
+html[data-theme='light'] .theme-code-block .token.comment { color: #808080 !important; }
 .alert { border-left-color: var(--ifm-color-primary); }
 .footer { background: var(--ifm-navbar-background-color); color: var(--ifm-font-color-base); }
 .navbar__search-input { border: 1px solid var(--ifm-color-emphasis-300); border-radius: .5rem; }

@@ -34,5 +34,6 @@ module.exports = {
       ],
     },
     colorMode: {defaultMode: 'dark', respectPrefersColorScheme: false},
+    prism: {additionalLanguages: ['bash']},
   },
 };
