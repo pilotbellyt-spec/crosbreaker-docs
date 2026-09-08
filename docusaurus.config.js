@@ -27,6 +27,7 @@ module.exports = {
   themeConfig: {
     navbar: {
       title: 'crosbreaker',
+      logo: {src: 'img/crosbreaker.webp', alt: 'crosbreaker'},
       items: [
         {to: '/quickstart/', label: 'Getting Started', position: 'left'},
         {type: 'search', position: 'right'},
