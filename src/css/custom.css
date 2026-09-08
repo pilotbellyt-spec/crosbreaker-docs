@@ -95,6 +95,8 @@ html[data-theme='dark'] .navbar { border-bottom-color: #0a0a0a; }
 .navbar__logo { width: 42px; height: 40px; display: block; }
 .navbar__logo img { width: 42px; height: 40px; display: block; }
 .navbar__title { color: var(--ifm-link-color); font-family: Doto, var(--ifm-font-family-base); font-weight: 500; letter-spacing: .05em; }
+html[data-theme='light'] .navbar__title { color: #2a2365; }
+html[data-theme='dark'] .navbar__title { color: #c4c1ff; }
 .navbar__link, .navbar__item { color: var(--ifm-navbar-link-color, var(--ifm-font-color-base)); }
 .navbar__link:hover { color: var(--ifm-link-color); }
 .theme-doc-sidebar-container, .theme-doc-sidebar-menu { background: var(--ifm-navbar-background-color); }
