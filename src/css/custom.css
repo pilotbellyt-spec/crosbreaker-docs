@@ -92,6 +92,8 @@ html[data-theme='light'] {
 }
 .navbar { border-bottom: 1px solid var(--ifm-color-emphasis-200); box-shadow: none; background: var(--ifm-navbar-background-color); }
 html[data-theme='dark'] .navbar { border-bottom-color: #0a0a0a; }
+.navbar__logo { width: 42px; height: 40px; display: block; }
+.navbar__logo img { width: 42px; height: 40px; display: block; }
 .navbar__title { color: var(--ifm-link-color); font-family: Doto, var(--ifm-font-family-base); font-weight: 500; letter-spacing: .05em; }
 .navbar__link, .navbar__item { color: var(--ifm-navbar-link-color, var(--ifm-font-color-base)); }
 .navbar__link:hover { color: var(--ifm-link-color); }
@@ -135,3 +137,6 @@ html[data-theme='light'] .theme-code-block .token.comment { color: #808080 !impo
 .picker-fields input { padding: .7rem; border: 1px solid var(--ifm-color-emphasis-300); border-radius: .3rem; background: var(--ifm-background-surface-color); color: var(--ifm-heading-color); font: inherit; }
 .compatibility { border-left: 3px solid var(--ifm-color-primary); padding: .75rem 1rem; background: var(--ifm-color-emphasis-100); overflow-wrap: anywhere; }
 .missing-image { display: inline-block; margin-block: .5rem; }
+.theme-doc-markdown img { display: block; width: auto; max-width: 100%; height: auto; }
+.theme-doc-markdown li li img { max-width: 640px; }
+.theme-doc-markdown li li li img { max-width: 600px; }
