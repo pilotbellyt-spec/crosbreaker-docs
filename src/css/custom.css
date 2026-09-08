@@ -1,17 +1,69 @@
 :root {
-  --ifm-color-primary: #246e52;
-  --ifm-color-primary-dark: #206349;
-  --ifm-color-primary-darker: #1f5e46;
-  --ifm-color-primary-darkest: #194d39;
-  --ifm-color-primary-light: #28795a;
-  --ifm-color-primary-lighter: #297f5e;
-  --ifm-color-primary-lightest: #2f8f6b;
+  --ifm-color-primary: #5b52e0;
+  --ifm-color-primary-dark: #443ad9;
+  --ifm-color-primary-darker: #392ed6;
+  --ifm-color-primary-darkest: #2c23b2;
+  --ifm-color-primary-light: #726ae7;
+  --ifm-color-primary-lighter: #7d76ea;
+  --ifm-color-primary-lightest: #a09bf3;
+  --ifm-background-color: #fff;
+  --ifm-background-surface-color: #f8f8fc;
+  --ifm-navbar-background-color: #f6f7f9;
+  --ifm-font-color-base: #404040;
+  --ifm-heading-color: #1a1a1a;
+  --ifm-link-color: #5b52e0;
+  --ifm-menu-color-active: #5b52e0;
+  --ifm-menu-color-background-active: #e8e6ff;
+  --ifm-card-background-color: #f8f8fc;
+  --ifm-navbar-search-input-background-color: #fff;
+  --ifm-navbar-search-input-color: #404040;
+  --ifm-navbar-search-input-placeholder-color: #808080;
+  --search-local-modal-background: var(--ifm-background-surface-color);
+  --search-local-hit-background: var(--ifm-background-color);
+  --search-local-hit-color: var(--ifm-font-color-base);
+  --search-local-highlight-color: var(--ifm-color-primary);
+  --search-local-muted-color: #808080;
 }
-[data-theme='dark'] { --ifm-color-primary: #79d9af; }
+html[data-theme='dark'] {
+  --ifm-color-primary: #6c63ff;
+  --ifm-color-primary-dark: #4c41ff;
+  --ifm-color-primary-darker: #3b30ff;
+  --ifm-color-primary-darkest: #1000fc;
+  --ifm-color-primary-light: #8c85ff;
+  --ifm-color-primary-lighter: #9d96ff;
+  --ifm-color-primary-lightest: #c4c1ff;
+  --ifm-background-color: #0a0a0a;
+  --ifm-background-surface-color: #1a1a1a;
+  --ifm-navbar-background-color: #1a1a1a;
+  --ifm-font-color-base: #b0b0b0;
+  --ifm-heading-color: #f5f5f5;
+  --ifm-color-emphasis-100: #1a1a1a;
+  --ifm-color-emphasis-200: #2a2a2a;
+  --ifm-color-emphasis-300: #404040;
+  --ifm-color-emphasis-400: #808080;
+  --ifm-color-emphasis-500: #b0b0b0;
+  --ifm-color-emphasis-600: #b0b0b0;
+  --ifm-color-emphasis-700: #e0e0e0;
+  --ifm-color-emphasis-800: #f5f5f5;
+  --ifm-link-color: #c4c1ff;
+  --ifm-link-hover-color: #f5f5f5;
+  --ifm-menu-color-active: #c4c1ff;
+  --ifm-menu-color-background-active: #1a1a2e;
+  --ifm-card-background-color: #1a1a1a;
+  --ifm-navbar-search-input-background-color: #0a0a0a;
+  --ifm-navbar-search-input-color: #f5f5f5;
+}
+.navbar { border-bottom: 1px solid var(--ifm-color-emphasis-200); box-shadow: none; }
+.navbar__title { color: var(--ifm-link-color); }
+.theme-doc-sidebar-container { background: var(--ifm-navbar-background-color); }
+.navbar__search-input { border: 1px solid var(--ifm-color-emphasis-300); border-radius: .5rem; }
+.navbar__search-input:focus-visible, .picker-fields input:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 2px; }
 .doc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 1rem; margin-bottom: 2rem; }
-.doc-grid .card { border: 1px solid var(--ifm-color-emphasis-300); gap: .5rem; color: var(--ifm-font-color-base); }
+.doc-grid .card { border: 1px solid var(--ifm-color-emphasis-300); border-radius: 10px; gap: .5rem; color: var(--ifm-font-color-base); }
+.doc-grid .card strong { color: var(--ifm-link-color); }
+.doc-grid .card:hover { border-color: var(--ifm-color-primary); text-decoration: none; }
 .hero-actions, .picker-fields { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
 .picker-fields label { display: flex; flex: 1 1 220px; flex-direction: column; gap: .4rem; }
-.picker-fields input { padding: .7rem; border: 1px solid var(--ifm-color-emphasis-400); border-radius: .3rem; background: var(--ifm-background-color); color: var(--ifm-font-color-base); font: inherit; }
+.picker-fields input { padding: .7rem; border: 1px solid var(--ifm-color-emphasis-300); border-radius: .3rem; background: var(--ifm-background-surface-color); color: var(--ifm-heading-color); font: inherit; }
 .compatibility { border-left: 3px solid var(--ifm-color-primary); padding: .75rem 1rem; background: var(--ifm-color-emphasis-100); overflow-wrap: anywhere; }
 .missing-image { display: inline-block; margin-block: .5rem; }
