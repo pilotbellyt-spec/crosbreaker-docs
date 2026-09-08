@@ -5,6 +5,7 @@ module.exports = {
   baseUrl: '/crosbreaker-docs/',
   organizationName: 'pilotbellyt-spec',
   projectName: 'crosbreaker-docs',
+  favicon: 'favicon.ico',
   deploymentBranch: 'gh-pages',
   trailingSlash: true,
   onBrokenLinks: 'throw',
