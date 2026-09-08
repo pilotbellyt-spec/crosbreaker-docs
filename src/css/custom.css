@@ -92,9 +92,12 @@ html[data-theme='light'] {
 }
 .navbar { border-bottom: 1px solid var(--ifm-color-emphasis-200); box-shadow: none; background: var(--ifm-navbar-background-color); }
 html[data-theme='dark'] .navbar { border-bottom-color: #0a0a0a; }
+.navbar { height: 64px; padding: 12px 24px; }
+.navbar__inner { height: 40px; }
+.navbar__brand { gap: 24px; }
 .navbar__logo { width: 42px; height: 40px; display: block; }
 .navbar__logo img { width: 42px; height: 40px; display: block; }
-.navbar__title { color: var(--ifm-link-color); font-family: Doto, var(--ifm-font-family-base); font-weight: 500; letter-spacing: .05em; }
+.navbar__title { color: var(--ifm-link-color); font-family: Doto, var(--ifm-font-family-base); font-size: 24px; font-weight: 500; letter-spacing: .05em; line-height: 42px; }
 html[data-theme='light'] .navbar__title { color: #2a2365; -webkit-text-stroke: .2px #2a2365; }
 html[data-theme='dark'] .navbar__title { color: #c4c1ff; -webkit-text-stroke: .2px #c4c1ff; }
 .navbar__link, .navbar__item { color: var(--ifm-navbar-link-color, var(--ifm-font-color-base)); }
@@ -128,7 +131,8 @@ html[data-theme='light'] .theme-code-block .token.string, html[data-theme='light
 html[data-theme='light'] .theme-code-block .token.comment { color: #808080 !important; }
 .alert { border-left-color: var(--ifm-color-primary); }
 .footer { background: var(--ifm-navbar-background-color); color: var(--ifm-font-color-base); }
-.navbar__search-input { border: 1px solid var(--ifm-color-emphasis-300); border-radius: .5rem; }
+.navbar__search { width: 352px; height: 40px; }
+.navbar__search-input { width: 352px; height: 40px; border: 1px solid var(--ifm-color-emphasis-300); border-radius: .5rem; }
 .navbar__search-input:focus-visible, .picker-fields input:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 2px; }
 .doc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 1rem; margin-bottom: 2rem; }
 .doc-grid .card { border: 1px solid var(--ifm-color-emphasis-300); border-radius: 10px; gap: .5rem; color: var(--ifm-font-color-base); }
